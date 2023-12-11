@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Montagu+Slab:opsz,wght@16..144,700&family=Montez&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include 'base.html' %}
+<div class="home">
+    <div class="img-container">
+        <img src="static/images/trainer-bg.jpg">
+    </div>
+
+
+{% if current_user.is_authenticated %}
+<h1 class="name">It's Your Workout: Your Time. Your Body. Own It-{{account.name}}</h1>
+{% else %}
+<h1>Plese Login to add your workout</h1>
+{% endif %}
+</div>
+
+
+</body>
+</html>

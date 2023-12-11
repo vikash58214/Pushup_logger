@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout-Split</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+    </tr>
+    {% for split in splits %}
+    <tr>
+     <td>{{split.monday}}</td>
+    <td>{{split.tuesday}}</td>
+    <td>{{split.wednesday}}</td>
+    <td>{{split.thursday}}</td>
+    <td>{{split.friday}}</td>
+    <td>{{split.saturday}}</td>
+    <td>{{split.sunday}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

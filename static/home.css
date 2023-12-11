@@ -1,0 +1,29 @@
+h1{
+position: absolute;
+  top: 30%;
+  left: 22%;
+  padding-top:70px;
+  color:white;
+  font-family: 'Montez', cursive;
+ font-family: 'Hedvig Letters Serif', serif;
+font-family: 'Montagu Slab', serif;
+
+font-family: 'Outfit', sans-serif;
+}
+body{
+margin:0;
+}
+.img-container { background-color:black; }
+
+.img-container img { opacity: 0.1; }
+.home{
+  position: relative;
+  text-align: center;
+}
+img{
+
+height:770px;
+width:100%;
+padding-bottom:0px;
+
+}

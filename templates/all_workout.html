@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Workout</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='nav.css')}}">
+</head>
+<body>
+{% include 'base.html' %}
+
+<h1>Your workout</h1>
+<table>
+    <tr>
+        <th>Number of Workouts</th>
+        <th>Comments</th>
+    </tr>
+    {% for workout in workouts%}
+    <tr>
+        <td>{{workout.pushups}}</td>
+        <td>{{workout.comment}} </td>
+        <td><a href="{{url_for('edit_workout',workout_id=workout.id)}}"><p>update</p></a></td>
+        
+        <td><a href="{{url_for('delete_workout',workout_id=workout.id)}}"><p>delete</p></a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
